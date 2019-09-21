@@ -36,6 +36,8 @@ class App < Sinatra::Base
        a = number1*number2
      elsif operation == "divide"
        a = number1/number2
+     else
+       a = "Your answer is invalid ! "
      end
      a.to_s
    end
