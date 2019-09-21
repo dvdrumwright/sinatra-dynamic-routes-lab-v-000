@@ -12,13 +12,17 @@ class App < Sinatra::Base
     (numb.to_i**2).to_s
  end
 
- get '/say/:number/:phrase' do
-   PHRASE = " "
-   (params[:number].to_i).times  do
-   PHRASE += (params[:phrase])
+  get '/say/:number/:phrase' do
+    PHRASE = " "
+     (params[:number].to_i).times  do
+     PHRASE += (params[:phrase])
+     end
+     PHRASE
   end
-  PHRASE
- end
+
+  get '/say/:word1/:word2/:word3/:word4/:word5' do
+    (Number_words = params[:word1,:word2,:word3,:word4,:word5]).to_s
+  end
 
 
 
